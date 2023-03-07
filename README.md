@@ -2,30 +2,61 @@
 
 ## Learning Goals
 
-- Learning Goal 1
-- Learning Goal 2
-
-## Introduction
-
-A 1-2 sentence summary of what will be covered.
+- Create an interface
+- Create classes that implement an interface
 
 ## Instructions
 
-Walk the student through any setup required to run the lesson (i.e.
-`npm install` and `npm start`).
+Fork and clone this lab.
 
-## Deliverables
+You will implement the following interface hierarchy:
 
-List each of the deliverables the student must complete in order to finish the
-lab. Provide as much context as possible, including instructions on how to run
-the tests and other means of validating successful completion of deliverables.
+![task3 uml](https://curriculum-content.s3.amazonaws.com/6677/pillars/task3_uml.png)
 
-## Conclusion
+Create a new interface named `Flippable` with one abstract method named `flip()` that
+takes no parameters and has a `void` return type.
 
-A short one or two paragraph summary of the contents of the lessons, recapping
-the learning goals.
+Create a new class named `Coin` that implements `Flippable`.  The `flip()` method should
+print a random string of "Heads" or "Tails" each time it is called.
 
-## Resources
+Create a new class named `Mattress` that implements `Flippable`. Add a boolean instance
+variable named `labelSideUp` that should be initialized to `true`.  Implement the `flip()`
+method to toggle the value of `labelSideUp` and print the value as shown in the sample output below:
 
-- [Resource Link 1](example.com)
-- [Resource Link 2](example.com)
+```text
+Label side up is false
+```
+
+Edit the `Main` driver to instantiate an instance of each class and call the flip method 5 times in a
+loop:
+
+```java
+public class Main {
+	public static void main(String []args)  {
+		Flippable coin = new Coin();
+		for (int i = 0; i<5; i++) {
+			coin.flip();
+		}
+
+		Flippable mattress = new Mattress(); 
+		for (int i = 0; i<5; i++) {
+			mattress.flip();
+		}
+	}
+}
+```
+
+Confirm the output (random values may differ):
+
+```text
+Tails
+Tails
+Heads
+Heads
+Tails
+Label side up is false
+Label side up is true
+Label side up is false
+Label side up is true
+Label side up is false
+```
