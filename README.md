@@ -11,7 +11,7 @@ Fork and clone this lab.
 
 You will implement the following interface hierarchy:
 
-![task3 uml](https://curriculum-content.s3.amazonaws.com/6677/pillars/task3_uml.png)
+![interface lab uml](https://curriculum-content.s3.amazonaws.com/6677/pillars/interface_lab_uml.png)
 
 Create a new interface named `Flippable` with one abstract method named `flip()` that
 takes no parameters and has a `void` return type.
