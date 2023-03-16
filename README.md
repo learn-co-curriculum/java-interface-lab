@@ -32,7 +32,7 @@ loop:
 
 ```java
 public class Main {
-	public static void main(String []args)  {
+	public static void main(String[] args)  {
 		Flippable coin = new Coin();
 		for (int i = 0; i<5; i++) {
 			coin.flip();
@@ -60,6 +60,7 @@ Label side up is false
 Label side up is true
 Label side up is false
 ```
+
 
 Edit the Junit class `FlippableTest` to add two methods `coinFlip()` and `mattressFlip()`
 for testing the `Coin` and `Mattress` classes:
@@ -125,5 +126,5 @@ class FlippableTest {
 ```
 
 Run the Junit tests to confirm they pass.  In the rare case that the
-program flips exactly 20 heads or 20 tails and the `coinFlip()` test fails,
+program flips 20 heads or 20 tails and the `coinFlip()` test fails,
 try running the test again.
